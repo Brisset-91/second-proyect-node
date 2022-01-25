@@ -38,7 +38,9 @@ fs.writeFile('hola.txt','Hola a todos \n desde nuevo archivo','utf-8',atTheEnd)*
 
 // APPEND FILE
 function appendErr(err) {
-    if (err) throw err;
+    if (err) {
+        console.error('data error', err)
+    }
     console.log('The "data to append" was appended to file!');
 }
 
