@@ -21,7 +21,7 @@ console.log('Hola como estas', koderName.rainbow)*/
 //import { readFile } from 'fs';
 const fs = require ('fs')
 
-fs('./pruebas/text.txt', 'utf8', (err, data)=>{
+fs.readFile('./pruebas/text.txt', 'utf8', (err, data)=>{
     if (err) throw err;
     console.log(data);
 });
