@@ -18,11 +18,28 @@ const koderName = params.name
 
 console.log('Hola como estas', koderName.rainbow)*/
 
-//import { readFile } from 'fs';
 const fs = require ('fs')
-
+/*
 fs.readFile('./pruebas/text.txt', 'utf8', (err, data)=>{
     if (err) throw err;
     console.log(data);
 });
 
+// write one archive
+function atTheEnd(error) {
+    if (error) {
+        console.error('hubo un error al crear el archivo', error)
+        return
+    }
+    console.log('el archivo fue escrito exitosamente')
+}
+
+fs.writeFile('hola.txt','Hola a todos \n desde nuevo archivo','utf-8',atTheEnd)*/
+
+// APPEND FILE
+function appendErr(err) {
+    if (err) throw err;
+    console.log('The "data to append" was appended to file!');
+}
+
+fs.appendFile('hola.txt', 'data to append', 'utf8', appendErr);
