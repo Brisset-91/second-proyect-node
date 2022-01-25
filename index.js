@@ -6,12 +6,23 @@
  *  - Que no este versionada la caarpeta node_modules
  *  - Que corra el proyecto
  */
+
+ /*
  const colors = require('colors');
  const params = require('yargs-parser')(process.argv.slice(2))
- console.log('params: ', params)
+ //console.log('params: ', params)
  //console.log('OMG Rainbows!'.rainbow); 
 
 const koderName = params.name
 //const exists = nombres.includes(koderName)
 
-console.log('Hola como estas', koderName.rainbow)
+console.log('Hola como estas', koderName.rainbow)*/
+
+//import { readFile } from 'fs';
+const fs = require ('fs')
+
+fs('./pruebas/text.txt', 'utf8', (err, data)=>{
+    if (err) throw err;
+    console.log(data);
+});
+
